@@ -1,0 +1,83 @@
+<?php
+/**
+ * Template Name: Mensagens, Sidebar
+ *
+ * @package WordPress
+ * @subpackage 
+ * @since 
+ */
+?>
+
+<?php get_header(); ?>
+
+	<?php if ( has_post_thumbnail() ) {	the_post_thumbnail('full');	} ?>
+
+<div id="primary" class="site-content">
+    <div id="content" role="main">
+<header class="entry-header">
+				<span class="title-in">&nbsp//<span class="title" ><?php the_title(); /* Exibe o titlo */ ?> </span></span>
+				<hr id="hr_destaque" class="espaco">
+</header>
+					<?php //Baixa os posts de uma determinada categoria com um limite de posts ?>
+				<?php $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;       
+						query_posts( array( 'cat' => 17, 'posts_per_page' => 16, 'category__not_in' => array(), 'paged' => $paged ) );
+						while ( have_posts() ) : the_post(); ?> 
+
+					<?php //Encurtador de titulos ?>
+					
+				<?php //Inicio do Script de encurtamento de titulos
+					 if (strlen(the_title('','',FALSE)) > 15) { //Character length
+						  $title_short = substr(the_title('','',FALSE), 0, 15); // Character length
+						  preg_match('/^(.*)\s/s', $title_short, $matches);
+					  if ($matches[1]) $title_short = $matches[1];
+						  $title_short = $title_short.' ...'; // Ellipsis
+					  } else {
+						  $title_short = the_title('','',FALSE);
+					  } 
+					  //Final do Script de Encurtamentos de titulos
+				?>
+				
+					<?php //"if" que exibe as imagens das ministrações, se não tiver imagem vai exibir o logo da CBN ?>
+				<?php if (has_post_thumbnail( $post->ID ) ): ?>
+				<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
+
+				<div id="transbox" class="fundo">
+					<center><a title="<?php the_title_attribute(); ?>" href="<?php echo get_permalink(); ?>"><?php the_post_thumbnail(array(130,130));?></a>
+					</center>
+
+					<div class="fonttransbox">
+						<a title=' <?php the_title_attribute( $args ); ?> ' href="<?php echo get_permalink(); ?>"><?php echo $title_short ?></a><br>
+						<?php foreach((get_the_category()) as $category) {
+											echo $category->cat_name . ' ';
+											}?>
+						<span id="data_msg"><?php the_time('j/m/y') ?></span>
+					</div>
+				</div>
+
+				<?php else: ?>
+
+				<div id="transbox" class="fundo">
+					<a title="<?php the_title_attribute(); ?>" href="<?php echo get_permalink(); ?>"><img id="img_thumb" src= "<?php echo get_option('home')."/wp-content/none_images/none.jpg" ?>"; /></a>
+
+					<div class="fonttransbox">
+						<a title=' <?php the_title_attribute( $args ); ?> ' href="<?php echo get_permalink(); ?>"><?php echo $title_short ?></a>
+						<br>
+						<span id="data_msg"><?php foreach((get_the_category()) as $category) {
+											echo $category->cat_name . ' ';
+											}?><br>
+						<?php the_time('j/m/y') ?></span>
+					</div>
+				</div>
+
+				<?php endif; ?>
+				<?php endwhile;?>
+				<br><br>
+				
+				<div id="pagenavi_all"><?php wp_pagenavi(); ?></div>
+				
+    </div><!-- #content -->
+</div><!-- #primary -->
+
+<?php get_sidebar('mensagem'); ?>
+
+<?php get_footer(); ?>

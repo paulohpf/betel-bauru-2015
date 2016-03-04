@@ -1,0 +1,84 @@
+[21-Oct-2015 20:01:46] PHP Warning:  require_once(/path/to/twilio-php/Services/Twilio.php) [<a href='function.require-once'>function.require-once</a>]: failed to open stream: No such file or directory in /home/betel324/public_html/act/wp-content/themes/twentytwelve-chield/webservices/twilio.php on line 3
+[21-Oct-2015 20:01:46] PHP Fatal error:  require_once() [<a href='function.require'>function.require</a>]: Failed opening required '/path/to/twilio-php/Services/Twilio.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/betel324/public_html/act/wp-content/themes/twentytwelve-chield/webservices/twilio.php on line 3
+[21-Oct-2015 20:16:59] PHP Warning:  require_once(/../twilio/Services/Twilio.php) [<a href='function.require-once'>function.require-once</a>]: failed to open stream: No such file or directory in /home/betel324/public_html/act/wp-content/themes/twentytwelve-chield/webservices/twilio.php on line 3
+[21-Oct-2015 20:16:59] PHP Fatal error:  require_once() [<a href='function.require'>function.require</a>]: Failed opening required '/../twilio/Services/Twilio.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/betel324/public_html/act/wp-content/themes/twentytwelve-chield/webservices/twilio.php on line 3
+[21-Oct-2015 20:17:19] PHP Fatal error:  Uncaught exception 'Services_Twilio_RestException' with message 'Authentication Error - PN1d53251295ad58805444e62678ffa645 is not a valid AccountSID' in /home/betel324/public_html/act/wp-content/themes/twentytwelve-chield/twilio/Services/Twilio.php:297
+Stack trace:
+#0 /home/betel324/public_html/act/wp-content/themes/twentytwelve-chield/twilio/Services/Twilio.php(180): Base_Services_Twilio->_processResponse(Array)
+#1 /home/betel324/public_html/act/wp-content/themes/twentytwelve-chield/twilio/Services/Twilio/ListResource.php(92): Base_Services_Twilio->createData('/2010-04-01/Acc...', Array)
+#2 /home/betel324/public_html/act/wp-content/themes/twentytwelve-chield/twilio/Services/Twilio/Rest/Messages.php(24): Services_Twilio_ListResource->_create(Array)
+#3 /home/betel324/public_html/act/wp-content/themes/twentytwelve-chield/twilio/Services/Twilio/Rest/Messages.php(71): Services_Twilio_Rest_Messages->create(Array)
+#4 /home/betel324/public_html/act/wp-content/themes/twentytwelve-chield/webservices/twilio.php(10): Se in /home/betel324/public_html/act/wp-content/themes/twentytwelve-chield/twilio/Services/Twilio.php on line 297
+[21-Oct-2015 20:22:36] PHP Fatal error:  Uncaught exception 'Services_Twilio_RestException' with message 'Media urls:  are invalid. Please use only valid http and https urls' in /home/betel324/public_html/act/wp-content/themes/twentytwelve-chield/twilio/Services/Twilio.php:297
+Stack trace:
+#0 /home/betel324/public_html/act/wp-content/themes/twentytwelve-chield/twilio/Services/Twilio.php(180): Base_Services_Twilio->_processResponse(Array)
+#1 /home/betel324/public_html/act/wp-content/themes/twentytwelve-chield/twilio/Services/Twilio/ListResource.php(92): Base_Services_Twilio->createData('/2010-04-01/Acc...', Array)
+#2 /home/betel324/public_html/act/wp-content/themes/twentytwelve-chield/twilio/Services/Twilio/Rest/Messages.php(24): Services_Twilio_ListResource->_create(Array)
+#3 /home/betel324/public_html/act/wp-content/themes/twentytwelve-chield/twilio/Services/Twilio/Rest/Messages.php(71): Services_Twilio_Rest_Messages->create(Array)
+#4 /home/betel324/public_html/act/wp-content/themes/twentytwelve-chield/webservices/twilio.php(10): Services_Twilio_Re in /home/betel324/public_html/act/wp-content/themes/twentytwelve-chield/twilio/Services/Twilio.php on line 297
+[21-Oct-2015 20:24:25] PHP Fatal error:  Uncaught exception 'Services_Twilio_RestException' with message 'The From phone number +5514991648159 is not a valid, SMS-capable inbound phone number or short code for your account.' in /home/betel324/public_html/act/wp-content/themes/twentytwelve-chield/twilio/Services/Twilio.php:297
+Stack trace:
+#0 /home/betel324/public_html/act/wp-content/themes/twentytwelve-chield/twilio/Services/Twilio.php(180): Base_Services_Twilio->_processResponse(Array)
+#1 /home/betel324/public_html/act/wp-content/themes/twentytwelve-chield/twilio/Services/Twilio/ListResource.php(92): Base_Services_Twilio->createData('/2010-04-01/Acc...', Array)
+#2 /home/betel324/public_html/act/wp-content/themes/twentytwelve-chield/twilio/Services/Twilio/Rest/Messages.php(24): Services_Twilio_ListResource->_create(Array)
+#3 /home/betel324/public_html/act/wp-content/themes/twentytwelve-chield/twilio/Services/Twilio/Rest/Messages.php(71): Services_Twilio_Rest_Messages->create(Array)
+#4 /home/betel324/public_html/act/wp-content/themes/twentytwelve-chi in /home/betel324/public_html/act/wp-content/themes/twentytwelve-chield/twilio/Services/Twilio.php on line 297
+[21-Oct-2015 21:19:23] PHP Parse error:  syntax error, unexpected '<' in /home/betel324/public_html/act/wp-content/themes/twentytwelve-chield/webservices/twilio.php on line 4
+[21-Oct-2015 21:24:59] PHP Parse error:  syntax error, unexpected T_ECHO, expecting ',' or ';' in /home/betel324/public_html/act/wp-content/themes/twentytwelve-chield/webservices/twilio.php on line 9
+[21-Oct-2015 21:30:17] PHP Fatal error:  Uncaught exception 'Services_Twilio_RestException' with message 'The number +5514991185844 is unverified. Trial accounts cannot send messages to unverified numbers; verify +5514991185844 at twilio.com/user/account/phone-numbers/verified, or purchase a Twilio number to send messages to unverified numbers.' in /home/betel324/public_html/act/wp-content/themes/twentytwelve-chield/twilio/Services/Twilio.php:297
+Stack trace:
+#0 /home/betel324/public_html/act/wp-content/themes/twentytwelve-chield/twilio/Services/Twilio.php(180): Base_Services_Twilio->_processResponse(Array)
+#1 /home/betel324/public_html/act/wp-content/themes/twentytwelve-chield/twilio/Services/Twilio/ListResource.php(92): Base_Services_Twilio->createData('/2010-04-01/Acc...', Array)
+#2 /home/betel324/public_html/act/wp-content/themes/twentytwelve-chield/twilio/Services/Twilio/Rest/Messages.php(24): Services_Twilio_ListResource->_create(Array)
+#3 /home/betel324/public_html/act/wp-content/themes/twentytwelve-chield/twilio/Services/Twilio/Rest/Messages in /home/betel324/public_html/act/wp-content/themes/twentytwelve-chield/twilio/Services/Twilio.php on line 297
+[21-Oct-2015 21:30:37] PHP Warning:  json_encode() expects exactly 1 parameter, 2 given in /home/betel324/public_html/act/wp-content/themes/twentytwelve-chield/twilio/Services/Twilio/Resource.php on line 130
+[21-Oct-2015 21:30:37] PHP Catchable fatal error:  Method Services_Twilio_Rest_Message::__toString() must return a string value in /home/betel324/public_html/act/wp-content/themes/twentytwelve-chield/webservices/twilio.php on line 21
+[21-Oct-2015 21:31:36] PHP Fatal error:  Uncaught exception 'Services_Twilio_RestException' with message 'The 'To' number 22 is not a valid phone number.' in /home/betel324/public_html/act/wp-content/themes/twentytwelve-chield/twilio/Services/Twilio.php:297
+Stack trace:
+#0 /home/betel324/public_html/act/wp-content/themes/twentytwelve-chield/twilio/Services/Twilio.php(180): Base_Services_Twilio->_processResponse(Array)
+#1 /home/betel324/public_html/act/wp-content/themes/twentytwelve-chield/twilio/Services/Twilio/ListResource.php(92): Base_Services_Twilio->createData('/2010-04-01/Acc...', Array)
+#2 /home/betel324/public_html/act/wp-content/themes/twentytwelve-chield/twilio/Services/Twilio/Rest/Messages.php(24): Services_Twilio_ListResource->_create(Array)
+#3 /home/betel324/public_html/act/wp-content/themes/twentytwelve-chield/twilio/Services/Twilio/Rest/Messages.php(71): Services_Twilio_Rest_Messages->create(Array)
+#4 /home/betel324/public_html/act/wp-content/themes/twentytwelve-chield/webservices/twilio.php(21): Services_Twilio_Rest_Messages->sendMes in /home/betel324/public_html/act/wp-content/themes/twentytwelve-chield/twilio/Services/Twilio.php on line 297
+[21-Oct-2015 21:32:16] PHP Fatal error:  Uncaught exception 'Services_Twilio_RestException' with message 'The 'To' number 22 is not a valid phone number.' in /home/betel324/public_html/act/wp-content/themes/twentytwelve-chield/twilio/Services/Twilio.php:297
+Stack trace:
+#0 /home/betel324/public_html/act/wp-content/themes/twentytwelve-chield/twilio/Services/Twilio.php(180): Base_Services_Twilio->_processResponse(Array)
+#1 /home/betel324/public_html/act/wp-content/themes/twentytwelve-chield/twilio/Services/Twilio/ListResource.php(92): Base_Services_Twilio->createData('/2010-04-01/Acc...', Array)
+#2 /home/betel324/public_html/act/wp-content/themes/twentytwelve-chield/twilio/Services/Twilio/Rest/Messages.php(24): Services_Twilio_ListResource->_create(Array)
+#3 /home/betel324/public_html/act/wp-content/themes/twentytwelve-chield/twilio/Services/Twilio/Rest/Messages.php(71): Services_Twilio_Rest_Messages->create(Array)
+#4 /home/betel324/public_html/act/wp-content/themes/twentytwelve-chield/webservices/twilio.php(21): Services_Twilio_Rest_Messages->sendMes in /home/betel324/public_html/act/wp-content/themes/twentytwelve-chield/twilio/Services/Twilio.php on line 297
+[21-Oct-2015 21:33:27] PHP Fatal error:  Uncaught exception 'Services_Twilio_RestException' with message 'The 'To' number 222 is not a valid phone number.' in /home/betel324/public_html/act/wp-content/themes/twentytwelve-chield/twilio/Services/Twilio.php:297
+Stack trace:
+#0 /home/betel324/public_html/act/wp-content/themes/twentytwelve-chield/twilio/Services/Twilio.php(180): Base_Services_Twilio->_processResponse(Array)
+#1 /home/betel324/public_html/act/wp-content/themes/twentytwelve-chield/twilio/Services/Twilio/ListResource.php(92): Base_Services_Twilio->createData('/2010-04-01/Acc...', Array)
+#2 /home/betel324/public_html/act/wp-content/themes/twentytwelve-chield/twilio/Services/Twilio/Rest/Messages.php(24): Services_Twilio_ListResource->_create(Array)
+#3 /home/betel324/public_html/act/wp-content/themes/twentytwelve-chield/twilio/Services/Twilio/Rest/Messages.php(71): Services_Twilio_Rest_Messages->create(Array)
+#4 /home/betel324/public_html/act/wp-content/themes/twentytwelve-chield/webservices/twilio.php(21): Services_Twilio_Rest_Messages->sendMe in /home/betel324/public_html/act/wp-content/themes/twentytwelve-chield/twilio/Services/Twilio.php on line 297
+[21-Oct-2015 21:33:43] PHP Warning:  json_encode() expects exactly 1 parameter, 2 given in /home/betel324/public_html/act/wp-content/themes/twentytwelve-chield/twilio/Services/Twilio/Resource.php on line 130
+[21-Oct-2015 21:33:43] PHP Catchable fatal error:  Method Services_Twilio_Rest_Message::__toString() must return a string value in /home/betel324/public_html/act/wp-content/themes/twentytwelve-chield/webservices/twilio.php on line 23
+[21-Oct-2015 21:43:46] PHP Warning:  json_encode() expects exactly 1 parameter, 2 given in /home/betel324/public_html/act/wp-content/themes/twentytwelve-chield/twilio/Services/Twilio/Resource.php on line 130
+[21-Oct-2015 21:43:46] PHP Catchable fatal error:  Method Services_Twilio_Rest_Message::__toString() must return a string value in /home/betel324/public_html/act/wp-content/themes/twentytwelve-chield/webservices/twilio.php on line 23
+[21-Oct-2015 21:43:50] PHP Warning:  json_encode() expects exactly 1 parameter, 2 given in /home/betel324/public_html/act/wp-content/themes/twentytwelve-chield/twilio/Services/Twilio/Resource.php on line 130
+[21-Oct-2015 21:43:50] PHP Catchable fatal error:  Method Services_Twilio_Rest_Message::__toString() must return a string value in /home/betel324/public_html/act/wp-content/themes/twentytwelve-chield/webservices/twilio.php on line 23
+[21-Oct-2015 21:44:29] PHP Fatal error:  Uncaught exception 'Services_Twilio_RestException' with message 'The 'To' number +5 is not a valid phone number.' in /home/betel324/public_html/act/wp-content/themes/twentytwelve-chield/twilio/Services/Twilio.php:297
+Stack trace:
+#0 /home/betel324/public_html/act/wp-content/themes/twentytwelve-chield/twilio/Services/Twilio.php(180): Base_Services_Twilio->_processResponse(Array)
+#1 /home/betel324/public_html/act/wp-content/themes/twentytwelve-chield/twilio/Services/Twilio/ListResource.php(92): Base_Services_Twilio->createData('/2010-04-01/Acc...', Array)
+#2 /home/betel324/public_html/act/wp-content/themes/twentytwelve-chield/twilio/Services/Twilio/Rest/Messages.php(24): Services_Twilio_ListResource->_create(Array)
+#3 /home/betel324/public_html/act/wp-content/themes/twentytwelve-chield/twilio/Services/Twilio/Rest/Messages.php(71): Services_Twilio_Rest_Messages->create(Array)
+#4 /home/betel324/public_html/act/wp-content/themes/twentytwelve-chield/webservices/twilio.php(21): Services_Twilio_Rest_Messages->sendMes in /home/betel324/public_html/act/wp-content/themes/twentytwelve-chield/twilio/Services/Twilio.php on line 297
+[21-Oct-2015 21:49:58] PHP Fatal error:  Uncaught exception 'Services_Twilio_RestException' with message 'The 'To' number +5 is not a valid phone number.' in /home/betel324/public_html/act/wp-content/themes/twentytwelve-chield/twilio/Services/Twilio.php:297
+Stack trace:
+#0 /home/betel324/public_html/act/wp-content/themes/twentytwelve-chield/twilio/Services/Twilio.php(180): Base_Services_Twilio->_processResponse(Array)
+#1 /home/betel324/public_html/act/wp-content/themes/twentytwelve-chield/twilio/Services/Twilio/ListResource.php(92): Base_Services_Twilio->createData('/2010-04-01/Acc...', Array)
+#2 /home/betel324/public_html/act/wp-content/themes/twentytwelve-chield/twilio/Services/Twilio/Rest/Messages.php(24): Services_Twilio_ListResource->_create(Array)
+#3 /home/betel324/public_html/act/wp-content/themes/twentytwelve-chield/twilio/Services/Twilio/Rest/Messages.php(71): Services_Twilio_Rest_Messages->create(Array)
+#4 /home/betel324/public_html/act/wp-content/themes/twentytwelve-chield/webservices/twilio.php(21): Services_Twilio_Rest_Messages->sendMes in /home/betel324/public_html/act/wp-content/themes/twentytwelve-chield/twilio/Services/Twilio.php on line 297
+[21-Oct-2015 21:56:50] PHP Fatal error:  Call to a member function sendMessage() on a non-object in /home/betel324/public_html/act/wp-content/themes/twentytwelve-chield/webservices/twilio.php on line 21
+[26-Oct-2015 17:48:30] PHP Fatal error:  Uncaught exception 'Services_Twilio_RestException' with message 'The 'To' number 123 is not a valid phone number.' in /home/betel324/public_html/act/wp-content/themes/twentytwelve-chield/twilio/Services/Twilio.php:297
+Stack trace:
+#0 /home/betel324/public_html/act/wp-content/themes/twentytwelve-chield/twilio/Services/Twilio.php(180): Base_Services_Twilio->_processResponse(Array)
+#1 /home/betel324/public_html/act/wp-content/themes/twentytwelve-chield/twilio/Services/Twilio/ListResource.php(92): Base_Services_Twilio->createData('/2010-04-01/Acc...', Array)
+#2 /home/betel324/public_html/act/wp-content/themes/twentytwelve-chield/twilio/Services/Twilio/Rest/Messages.php(24): Services_Twilio_ListResource->_create(Array)
+#3 /home/betel324/public_html/act/wp-content/themes/twentytwelve-chield/twilio/Services/Twilio/Rest/Messages.php(71): Services_Twilio_Rest_Messages->create(Array)
+#4 /home/betel324/public_html/act/wp-content/themes/twentytwelve-chield/webservices/twilio.php(21): Services_Twilio_Rest_Messages->sendMe in /home/betel324/public_html/act/wp-content/themes/twentytwelve-chield/twilio/Services/Twilio.php on line 297

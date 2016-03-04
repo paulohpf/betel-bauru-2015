@@ -1,0 +1,8 @@
+[26-Oct-2015 19:50:34] PHP Fatal error:  Call to undefined function  get_header() in /home/betel324/public_html/act/wp-content/themes/twentytwelve-chield/index.php on line 17
+[07-Feb-2016 17:43:25] PHP Fatal error:  Call to undefined function  get_header() in /home/betel324/public_html/wp-content/themes/twentytwelve-chield/index.php on line 17
+[07-Feb-2016 17:57:01] PHP Fatal error:  Call to undefined function  get_header() in /home/betel324/public_html/wp-content/themes/twentytwelve-chield/index.php on line 17
+[07-Feb-2016 18:15:33] PHP Fatal error:  Call to undefined function  get_header() in /home/betel324/public_html/wp-content/themes/twentytwelve-chield/index.php on line 17
+[08-Feb-2016 16:12:39] PHP Fatal error:  Call to undefined function  get_header() in /home/betel324/public_html/wp-content/themes/twentytwelve-chield/index.php on line 17
+[01-Mar-2016 09:32:11] PHP Fatal error:  Call to undefined function  language_attributes() in /home/betel324/public_html/wp-content/themes/twentytwelve-chield/header.php on line 13
+[01-Mar-2016 09:32:11] PHP Fatal error:  Call to undefined function  add_filter() in /home/betel324/public_html/wp-content/themes/twentytwelve-chield/functions.php on line 3
+[01-Mar-2016 09:32:12] PHP Fatal error:  Call to undefined function  dynamic_sidebar() in /home/betel324/public_html/wp-content/themes/twentytwelve-chield/footer.php on line 16
