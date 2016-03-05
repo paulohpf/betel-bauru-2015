@@ -1956,6 +1956,12 @@ img#wpstats {
 		margin-left:8px;
 		margin-top:2px;
 	}
+	body.page-template-contato .site-content{
+		padding-top:2%;
+	}
+	body.page-template-contato .entry-content{
+		margin-left:15%;
+	}	
 	.widget-area {
 		float: right;
 		width: 26.041666667%;
