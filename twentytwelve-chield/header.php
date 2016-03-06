@@ -31,8 +31,12 @@
 <![endif]-->
 <?php wp_head(); ?>
 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-<script src="<?php echo home_url() ?>/wp-content/themes/twentytwelve-chield/bootstrap/js/bootstrap.min.js">
+<script src="<?php echo home_url() ?>/wp-content/themes/twentytwelve-chield/bootstrap/js/bootstrap.js"/>
 </script>
+<script src="<?php echo home_url() ?>/wp-content/themes/twentytwelve-chield/api_betel.js"/>
+</script>
+<link href="<?php echo home_url() ?>/wp-content/themes/twentytwelve-chield/bootstrap/css/bootstrap-theme.min.css" rel="stylesheet">
+
 </head>
 
 <body <?php body_class(); ?>>

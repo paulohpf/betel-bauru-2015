@@ -4,14 +4,83 @@
  */
 
 get_header(); ?>
+	<script type="text/javascript">
+		function validateForm(){
+			alert_Contato = "<strong>Atenção!</strong><br>";
+			//session = valor("captcha-session");
+			retorno_nome = false;
+			retorno_email = false;
+			retorno_message = false;
+			//captcha = false;
+			mudarClass("alert_Contato", "alert alert-warning");
+			
+			if(valor("nome")==""){
+				alert_Contato = alert_Contato+"O campo <strong>Nome</strong> precisa ser preenchido.<br>"
+			}else{
+				retorno_nome = true;
+			}
+			if(valor("email")==""){
+				alert_Contato = alert_Contato+"O campo <strong>Email</strong> precisa ser preenchido.<br>"
+			}else{
+				retorno_email = true;
+			}
+			if(valor("message")==""){
+				alert_Contato = alert_Contato+"O campo <strong>Mensagem</strong> precisa ser preenchido.<br>"
+			}else{
+				retorno_message = true;
+			}
+			
+			/*if(valor("captcha") != session){
+			alert_Contato = alert_Contato+"O campo de verificação foi preenchido errado.<br>"		
+			}
+			else{
+				captcha = true;
+			}*/
+			
+			if(retorno_nome == true && retorno_email == true && retorno_message == true /*&& captcha == true*/){
+				escondeCampo("alert_Contato");
+				return true;
+			}else{
+				valor_div("alert_Contato", alert_Contato);
+				mostraCampo("alert_Contato");
+			}	
+			
+			return false;
+		}
+		
+		function erroCaptcha(){
+			nome = "<?php echo $_REQUEST['nome'] ?>";
+			email = "<?php echo $_REQUEST['email'] ?>";
+			message = "<?php echo $_REQUEST['message'] ?>";
+			mudarClass("alert_Contato", "alert alert-warning");
+
+			valor('nome', nome);
+			valor('email', email);
+			valor('message', message);
+
+			alert_Contato = "<strong>Atenção!</strong><br>O campo de verificação foi preenchido errado.<br>"
+			valor_div("alert_Contato", alert_Contato);
+			mostraCampo("alert_Contato");			
+		}
+		
+		function sucessoEnvio(){
+			mudarClass("alert_Contato", "alert alert-success");
+			alert_Contato = "<strong>Sucesso!</strong><br>Sua mensagem foi enviada, aguarde um momento que entraremos em contato assim que possivel.<br>"
+			valor_div("alert_Contato", alert_Contato);
+			mostraCampo("alert_Contato");
+			
+			document.form_contato.reset();
+		}
+	</script>
 
 	<?php if ( has_post_thumbnail() ) {	the_post_thumbnail('full');	} ?>
 
 	<div id="primary" class="site-content">
 		<div id="content" role="main">
+			
+			</div>
 				<?php 
 					$action=$_REQUEST['action']; 					
-					if ($action=="")    /* display the contact form */ { 
 					
 						while (have_posts()) : the_post();
 						
@@ -20,8 +89,11 @@ get_header(); ?>
 							comments_template('', true); 
 
 						endwhile; // end of the loop.
-					 
-					}else{	/* send the submitted data */ 
+						
+						//$sessao_captcha =  ;
+					
+					//echo '<input id="captcha-session" style="display:none" value="'.$_SESSION["captcha"].'">';
+					if ($action!=""){	/* send the submitted data */ 
 						 
 						if( $_SESSION['captcha'] == $_POST['captcha']){
 							
@@ -43,13 +115,13 @@ get_header(); ?>
 								Mensagem:
 								$message";
 								
-								mail("webmaster@betel-bauru.com.br", $subject, $message_editor, $from); 
-								echo "Email enviado!"; 
-							}						
+								mail("webmaster@betel-bauru.com.br", $subject, $message_editor, $from); ?>
+								<script type="text/javascript">sucessoEnvio();</script>
+						<?php	}						
 						
-						}else{
-							echo "<h1>Erro - Código digitado errado</h1>";
-						}
+						}else{ ?>
+							<script type="text/javascript">erroCaptcha();</script>		
+				<?php	} 
 					}
 				?>
 		

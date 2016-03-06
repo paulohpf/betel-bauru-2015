@@ -32,6 +32,10 @@
 					<?php comments_popup_link( '<span class="leave-reply">' . __( 'Leave a reply', 'twentytwelve' ) . '</span>', __( '1 Reply', 'twentytwelve' ), __( '% Replies', 'twentytwelve' ) ); ?>
 				</div><!-- .comments-link -->
 			<?php endif; // comments_open() ?>
+			<?php $alert_post_id = 'alert_'.get_the_title();
+				$alert_post_id = str_replace(" ", "_", $alert_post_id)
+			?>
+			<div id="<?php echo $alert_post_id ?>" class="alert alert-danger"></div>			
 		</header><!-- .entry-header -->
 
 		<?php if ( is_search() ) : // Only display Excerpts for Search ?>
