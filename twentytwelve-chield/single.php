@@ -9,25 +9,42 @@
 
 get_header(); ?>
 
-	<div id="primary" class="site-content">
-		<div id="content" role="main">
+	<?php 
 
-			<?php while ( have_posts() ) : the_post(); ?>
+	$category = get_the_category($post->ID);
+	if(empty($category) == false){
+		$category_parents = strtolower(get_category_parents($category[0]->term_id, false, ';'));
+		$arvore_category_parents = preg_split("/;/", $category_parents, -1);
+		$categoria_pai = $arvore_category_parents[0];
+	}
 
-				<?php get_template_part( 'content', get_post_format() ); ?>
+	if($categoria_pai == "ministraçoes"){
+		echo '<meta http-equiv="refresh" content="0;url=http://act.betel-bauru.com.br/mensagem?id_post='.get_the_id().'">';
+	}else{
+		
+		?>
 
-				<nav class="nav-single">
-					<h3 class="assistive-text"><?php _e( 'Post navigation', 'twentytwelve' ); ?></h3>
-					<span class="nav-previous"><?php previous_post_link( '%link', '<span class="meta-nav">' . _x( '&larr;', 'Previous post link', 'twentytwelve' ) . '</span> %title' ); ?></span>
-					<span class="nav-next"><?php next_post_link( '%link', '%title <span class="meta-nav">' . _x( '&rarr;', 'Next post link', 'twentytwelve' ) . '</span>' ); ?></span>
-				</nav><!-- .nav-single -->
+		<div id="primary" class="site-content">
+			<div id="content" role="main">
 
-				<?php comments_template( '', true ); ?>
+				<?php while ( have_posts() ) : the_post(); ?>
 
-			<?php endwhile; // end of the loop. ?>
+					<?php get_template_part( 'content', get_post_format() ); ?>
 
-		</div><!-- #content -->
-	</div><!-- #primary -->
+					<nav class="nav-single">
+						<h3 class="assistive-text"><?php _e( 'Post navigation', 'twentytwelve' ); ?></h3>
+						<span class="nav-previous"><?php previous_post_link( '%link', '<span class="meta-nav">' . _x( '&larr;', 'Previous post link', 'twentytwelve' ) . '</span> %title' ); ?></span>
+						<span class="nav-next"><?php next_post_link( '%link', '%title <span class="meta-nav">' . _x( '&rarr;', 'Next post link', 'twentytwelve' ) . '</span>' ); ?></span>
+					</nav><!-- .nav-single -->
 
-<?php get_sidebar(); ?>
-<?php get_footer(); ?>
+					<?php comments_template( '', true ); ?>
+
+				<?php endwhile; // end of the loop. ?>
+
+			</div><!-- #content -->
+		</div><!-- #primary -->
+
+		<?php get_sidebar(); ?>
+		<?php get_footer(); 
+	
+	}?>

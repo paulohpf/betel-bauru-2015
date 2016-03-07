@@ -7,9 +7,11 @@ get_header(); ?>
 	<script type="text/javascript">
 		function validateForm(){
 			alert_Contato = "<strong>Atenção!</strong><br>";
+			//session = valor("captcha-session");
 			retorno_nome = false;
 			retorno_email = false;
 			retorno_message = false;
+			//captcha = false;
 			mudarClass("alert_Contato", "alert alert-warning");
 			
 			if(valor("nome")==""){
@@ -28,7 +30,14 @@ get_header(); ?>
 				retorno_message = true;
 			}
 			
-			if(retorno_nome == true && retorno_email == true && retorno_message == true){
+			/*if(valor("captcha") != session){
+			alert_Contato = alert_Contato+"O campo de verificação foi preenchido errado.<br>"		
+			}
+			else{
+				captcha = true;
+			}*/
+			
+			if(retorno_nome == true && retorno_email == true && retorno_message == true /*&& captcha == true*/){
 				escondeCampo("alert_Contato");
 				return true;
 			}else{
@@ -98,6 +107,7 @@ get_header(); ?>
 							}else{
 								$nome_comunicacao = "Comunicação Betel";
 								$email_comunicacao = "contato@betel-bauru.com.br";
+								//$from="From: $nome<$email>\r\nReturn-path: $email";
 								$from="From: $nome_comunicacao<$email_comunicacao>\r\nReply-To: $nome<$email>\r\nReturn-Path: $nome_comunicacao<$email_comunicacao>"; 
 								$subject="Formulario de contato Betel"; 
 								
