@@ -7,11 +7,9 @@ get_header(); ?>
 	<script type="text/javascript">
 		function validateForm(){
 			alert_Contato = "<strong>Atenção!</strong><br>";
-			//session = valor("captcha-session");
 			retorno_nome = false;
 			retorno_email = false;
 			retorno_message = false;
-			//captcha = false;
 			mudarClass("alert_Contato", "alert alert-warning");
 			
 			if(valor("nome")==""){
@@ -30,19 +28,13 @@ get_header(); ?>
 				retorno_message = true;
 			}
 			
-			/*if(valor("captcha") != session){
-			alert_Contato = alert_Contato+"O campo de verificação foi preenchido errado.<br>"		
-			}
-			else{
-				captcha = true;
-			}*/
-			
-			if(retorno_nome == true && retorno_email == true && retorno_message == true /*&& captcha == true*/){
+			if(retorno_nome == true && retorno_email == true && retorno_message == true){
 				escondeCampo("alert_Contato");
 				return true;
 			}else{
 				valor_div("alert_Contato", alert_Contato);
 				mostraCampo("alert_Contato");
+				focus("alert_Contato");
 			}	
 			
 			return false;
@@ -60,7 +52,8 @@ get_header(); ?>
 
 			alert_Contato = "<strong>Atenção!</strong><br>O campo de verificação foi preenchido errado.<br>"
 			valor_div("alert_Contato", alert_Contato);
-			mostraCampo("alert_Contato");			
+			mostraCampo("alert_Contato");
+			focus("alert_Contato");
 		}
 		
 		function sucessoEnvio(){
@@ -70,6 +63,7 @@ get_header(); ?>
 			mostraCampo("alert_Contato");
 			
 			document.form_contato.reset();
+			focus("alert_Contato");
 		}
 	</script>
 
@@ -90,9 +84,6 @@ get_header(); ?>
 
 						endwhile; // end of the loop.
 						
-						//$sessao_captcha =  ;
-					
-					//echo '<input id="captcha-session" style="display:none" value="'.$_SESSION["captcha"].'">';
 					if ($action!=""){	/* send the submitted data */ 
 						 
 						if( $_SESSION['captcha'] == $_POST['captcha']){
@@ -107,7 +98,6 @@ get_header(); ?>
 							}else{
 								$nome_comunicacao = "Comunicação Betel";
 								$email_comunicacao = "contato@betel-bauru.com.br";
-								//$from="From: $nome<$email>\r\nReturn-path: $email";
 								$from="From: $nome_comunicacao<$email_comunicacao>\r\nReply-To: $nome<$email>\r\nReturn-Path: $nome_comunicacao<$email_comunicacao>"; 
 								$subject="Formulario de contato Betel"; 
 								

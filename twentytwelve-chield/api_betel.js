@@ -26,6 +26,12 @@ function valor_div(id, valor){
 	}	
 }
 
+function focus(id){
+	document.getElementById(id).scrollIntoView();
+	document.getElementById(id).focus();
+}
+
+
 function mudarClass(id, valor){
 	if(valor==null){
 		retorno = document.getElementById(id).className;
@@ -34,10 +40,6 @@ function mudarClass(id, valor){
 		document.getElementById(id).className = valor;
 		return valor;
 	}		
-}
-
-function foco(id){
-	document.getElementById(id).focus();
 }
 
 function alerta(texto){

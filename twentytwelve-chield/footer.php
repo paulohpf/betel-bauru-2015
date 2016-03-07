@@ -20,9 +20,17 @@
 		<?php if ( dynamic_sidebar('rodape-direita-widgets') ) : else : endif; ?>
 	</div>
 	<div id="footer-message" class="footer-message">
-		<span class="logo-footer">Igreja Batista Betel</span>
-		<span class="ano-desenvolvido">2015</span>
-		<p class="informacao">Equipe de comunicação Betel</p>
+		<div class="div_ibb_footer">
+			<span class="logo-footer">Igreja Batista Betel</span>
+			<span class="ano-desenvolvido">2015</span>
+		</div>
+		
+		<div class="div_informacao">
+			<a href="http://www.facebook.com/betelbauru" target="_blank"><img class="footer-social-image" src="http://www.betel-bauru.com.br/wp-content/themes/twentytwelve-chield/images/facebook.png" width="32px"/></a>
+			<a href="http://www.youtube.com/betelbauru" target="_blank"><img class="footer-social-image" src="http://www.betel-bauru.com.br/wp-content/themes/twentytwelve-chield/images/youtube.png" width="32px"/></a>
+			<br>
+			<p class="informacao">Equipe de comunicação Betel</p>
+		</div>
 	</div>
 </body>
 </html>

@@ -160,6 +160,6 @@ function retorna_nome_pastor_preletor($post_id=null){
 function register_midias_menu() {
   register_nav_menu('midias-menu',__( 'Midias Menu' ));
 }
-add_action( 'init', 'register_midias_menu' );
+add_action( 'init', 'register_midias_menu' );	
 
 ?>

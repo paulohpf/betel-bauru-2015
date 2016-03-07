@@ -832,6 +832,7 @@ footer[role="contentinfo"] a:hover {
 	background:#000;
 	padding-top:26px;
 	padding-bottom:24px;
+	display:flex;
 }
 .body .logo-footer.toggled-on,
 .logo-footer {
@@ -839,7 +840,7 @@ footer[role="contentinfo"] a:hover {
 	color: white;
 	font-size: 200%;
 	position: relative;	
-	padding-left:4%;
+#	padding-left:4%;
 }
 .ano-desenvolvido{
 	font-family: "nexa_boldregular";
@@ -852,10 +853,23 @@ footer[role="contentinfo"] a:hover {
 .informacao{
 	color: white;
 	position: relative;
-	padding-top: 20px;
 	font-size:12px;
 	font-family: "nexa_lightregular";
-	padding-left: 4%;
+}
+.div_ibb_footer{
+	padding-left:4.8%;
+}
+
+.div_informacao{
+	position:absolute;
+	right:0;
+	padding-right:4.8%;
+}
+
+
+
+.footer-social-image{
+	margin-left:20%;
 }
 
 /* =Main content and comment content
@@ -1677,9 +1691,21 @@ a.comment-edit-link:hover {
 		display:inherit;
 		height:246px;
 	}
+	.footer-message{
+		display:block;
+	}	
 	.rodape-direita-widgets{
 		display:none;
-	}		
+	}
+	.div_informacao{
+		position:initial;
+		padding-right:initial;
+		padding-top:15px;
+		margin-left:4.8%;
+	}
+	.footer-social-image{
+	margin-left:30px;
+	}
 }
 
 #wp-calendar {
@@ -1810,24 +1836,21 @@ img#wpstats {
 		color: white;
 		font-size: 50px;
 		position: relative;	
-		padding-left:4.8%;
 	}
 	.ano-desenvolvido{
 		font-family: "nexa_boldregular";
 		color: white;
 		font-size: 17px;
 		position: relative;	
-		left: 1%;
+		left: 3%;
 	}
 	.informacao{
 		color: white;
 		float:right;
 		position: relative;
 		font-size:14px;
-		padding-top: 28px;
 		font-family: "nexa_lightregular";
-		padding-right: 4.8%;
-	}	
+	}
 }
 /* All Screens */
 @media screen and (min-width: 800px) {
@@ -1903,7 +1926,11 @@ img#wpstats {
 		margin-top:10px;
 		margin-bottom:10px;
 		width:152.7px;
-	}	
+	}
+	body .alert{
+		padding:2%;
+		display:none;
+	}		
 }
 		
 /* Minimum width of 930 pixels. */
@@ -1960,8 +1987,12 @@ img#wpstats {
 		padding-top:2%;
 	}
 	body.page-template-contato .entry-content{
-		margin-left:15%;
-	}	
+		margin-left:6%;
+	}
+	body .alert{
+		padding:2%;
+		display:none;
+	}		
 	.widget-area {
 		float: right;
 		width: 26.041666667%;
