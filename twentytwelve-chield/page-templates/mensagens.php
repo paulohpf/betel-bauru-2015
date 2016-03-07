@@ -54,26 +54,6 @@
 			<?php /*<button class="menu-toggle"><?php _e( 'Menu', 'twentytwelve' ); ?></button> */?>
 			<a class="assistive-text" href="#content" title="<?php esc_attr_e( 'Skip to content', 'twentytwelve' ); ?>"><?php _e( 'Skip to content', 'twentytwelve' ); ?></a>
 			<?php wp_nav_menu( array( 'theme_location' => 'midias-menu', 'menu_class' => 'nav-menu' ) ); ?>
-			
-			<?php 
-			
-				$id_post = $_REQUEST['id_post'];
-				if($id_post != ""){
-			?>
-					<script type="text/javascript">
-						$(document).ready(function () {
-							$.fancybox({
-								/*'width': '40%',
-								'height': '40%',*/
-								'autoScale': true,
-								'transitionIn': 'fade',
-								'transitionOut': 'fade',
-								'type': 'iframe',
-								'href': '<?php echo home_url() ?>/abrir-mensagens?id_post=<?php echo $id_post ?>'
-							});
-						});
-					</script>
-			<?php	}	?>
 		
 		<div class="fixedtopbar">
 			<nav class="navbar navbar-default navbar-static-top">
@@ -117,6 +97,26 @@
 		</div>
 		
 		</nav><!-- #site-navigation -->
+		
+		<?php 
+		
+			$id_post = $_REQUEST['id_post'];
+			if($id_post != ""){
+		?>
+				<script type="text/javascript">
+					$(document).ready(function () {
+						$.fancybox({
+							/*'width': '40%',
+							'height': '40%',*/
+							'autoScale': true,
+							'transitionIn': 'fade',
+							'transitionOut': 'fade',
+							'type': 'iframe',
+							'href': '<?php echo home_url() ?>/abrir-mensagens?id_post=<?php echo $id_post ?>'
+						});
+					});
+				</script>
+		<?php	}	?>		
 			
 		<div id="primary" class="site-content">
 			<div id="content" role="main">
